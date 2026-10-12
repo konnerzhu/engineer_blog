@@ -1,0 +1,77 @@
+baseURL: https://example.com/
+title: Field Notes
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+enableRobotsTXT: true
+enableEmoji: true
+taxonomies:
+  category: categories
+  tag: tags
+languages:
+  en:
+    label: English
+    locale: en-US
+    weight: 1
+    contentDir: content/en
+    params:
+      description: Ideas, experiments, and notes from the workbench.
+      nav:
+        home: Home
+        topics: Topics
+        archive: Archive
+        about: About
+      tagline: A personal journal for curious minds.
+      intro: "A place for things I’m learning, building, and thinking through."
+      latest: Latest writing
+      browse: Browse all notes
+      read: Read article
+      min: min read
+      search: Search notes...
+      searchHint: Type to search across the blog
+      empty: No matching notes. Try another search.
+      by: By
+      aboutTitle: About this blog
+      aboutText: A quiet corner of the internet for sharing what I learn and make. Replace this introduction with your own story.
+      topicsTitle: Explore by topic
+      archiveTitle: The archive
+  zh:
+    label: 简体中文
+    locale: zh-CN
+    weight: 2
+    contentDir: content/zh
+    params:
+      description: 来自工作台的想法、尝试与记录。
+      nav:
+        home: 首页
+        topics: 分类
+        archive: 归档
+        about: 关于
+      tagline: 写给好奇心的一本小札。
+      intro: "记录正在学习、动手实践和认真思考的事情。"
+      latest: 最近文章
+      browse: 浏览全部文章
+      read: 阅读全文
+      min: 分钟阅读
+      search: 搜索文章...
+      searchHint: 输入关键词搜索博客
+      empty: 没有找到相关文章，试试其他关键词。
+      by: 作者
+      aboutTitle: 关于这个博客
+      aboutText: 这里记录学习和创作中的点滴。你可以把这段介绍替换成自己的故事。
+      topicsTitle: 按分类浏览
+      archiveTitle: 文章归档
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    lineNos: false
+params:
+  author: Konner
+  email: konnerzhu888@gmail.com
+  github: https://github.com/konnerzhu
+  accent: "#c66b47"
+outputs:
+  home: [HTML, RSS]
+  section: [HTML, RSS]

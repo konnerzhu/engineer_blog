@@ -1,0 +1,1 @@
+<section class="archive-year"><h2>{{ .year }}</h2><div>{{ range .pages }}<a class="archive-row" href="{{ .RelPermalink }}"><time>{{ .Date.Format "Jan 02" }}</time><span>{{ .Title }}</span><span class="archive-arrow">↗</span></a>{{ end }}</div></section>

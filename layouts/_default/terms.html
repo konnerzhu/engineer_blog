@@ -1,0 +1,4 @@
+{{ define "main" }}
+<header class="page-heading"><span class="eyebrow">{{ .Site.Params.nav.topics }}</span><h1>{{ .Site.Params.topicsTitle }}</h1><p>{{ if eq .Site.Language.Lang "zh" }}循着兴趣，发现相关记录。{{ else }}Follow a thread of curiosity through the archive.{{ end }}</p></header>
+<div class="topic-grid">{{ range .Data.Terms.Alphabetical }}<a class="topic-card" href="{{ .Page.RelPermalink }}"><span class="topic-count">{{ len .Pages }} {{ if eq $.Site.Language.Lang "zh" }}篇{{ else }}notes{{ end }}</span><h2>{{ .Page.Title }}</h2><span class="topic-arrow">↗</span></a>{{ end }}</div>
+{{ end }}

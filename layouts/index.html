@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-copy"><span class="eyebrow"><span class="eyebrow-line"></span>{{ .Site.Params.tagline }}</span><h1>{{ .Site.Title }}<span class="period">.</span></h1><p>{{ .Site.Params.intro }}</p><a class="text-link" href="{{ "about/" | relLangURL }}">{{ .Site.Params.nav.about }} <span>↗</span></a></div>
+  <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-note">IDEAS<br>IN MOTION</div><div class="hero-star">✳</div></div>
+</section>
+<section class="content-section">
+  <div class="section-heading"><div><span class="eyebrow">THE JOURNAL</span><h2>{{ .Site.Params.latest }}</h2></div><a class="text-link" href="{{ "posts/" | relLangURL }}">{{ .Site.Params.browse }} <span>→</span></a></div>
+  <div class="post-grid">{{ range first 6 (where .Site.RegularPages "Section" "posts") }}{{ partial "post-card.html" . }}{{ end }}</div>
+</section>
+<section class="newsletter-band"><div><span class="eyebrow">A NOTE TO YOURSELF</span><h2>{{ if eq .Site.Language.Lang "zh" }}好文章，值得慢慢读。{{ else }}Good ideas deserve a little room.{{ end }}</h2></div><button type="button" class="round-arrow" data-search-open aria-label="Search articles">↗</button></section>
+{{ end }}

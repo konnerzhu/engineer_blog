@@ -1,0 +1,6 @@
+<article class="post-card">
+  <div class="post-card-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time><span class="meta-dot"></span><span>{{ .ReadingTime }} {{ .Site.Params.min }}</span></div>
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Description | default (.Summary | plainify) }}</p>
+  {{ with .Params.categories }}<div class="chips">{{ range . }}<a class="chip" href="{{ "categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}</div>{{ end }}
+</article>

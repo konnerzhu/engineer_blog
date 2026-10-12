@@ -1,0 +1,14 @@
+<header class="site-header container">
+  <a class="brand" href="{{ .Site.Home.RelPermalink }}"><span class="brand-mark">f.</span><span>{{ .Site.Title }}</span></a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.nav.home }}</a>
+    <a href="{{ "categories/" | relLangURL }}">{{ .Site.Params.nav.topics }}</a>
+    <a href="{{ "archive/" | relLangURL }}">{{ .Site.Params.nav.archive }}</a>
+    <a href="{{ "about/" | relLangURL }}">{{ .Site.Params.nav.about }}</a>
+  </nav>
+  <div class="header-tools">
+    <button class="icon-button" data-search-open aria-label="Search" title="Search (/)" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+    <button class="icon-button" data-theme-toggle aria-label="Toggle color theme" title="Toggle theme" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"/></svg></button>
+    <div class="language-switch">{{ range hugo.Sites }}{{ if eq .Language.Lang $.Site.Language.Lang }}{{ else }}<a href="{{ .Home.RelPermalink }}">{{ .Language.Label }}</a>{{ end }}{{ end }}</div>
+  </div>
+</header>

@@ -1,0 +1,9 @@
+{{ $items := slice }}
+{{ range where .Site.RegularPages "Section" "posts" }}
+  {{ $items = $items | append (dict "title" .Title "url" .RelPermalink "summary" (.Summary | plainify) "date" (.Date.Format "2006-01-02")) }}
+{{ end }}
+<dialog class="search-dialog" data-search-dialog>
+  <div class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input type="search" placeholder="{{ .Site.Params.search }}" aria-label="{{ .Site.Params.search }}" data-search-input><button type="button" class="close-button" data-search-close aria-label="Close">Esc</button></div>
+  <div class="search-results" data-search-results data-empty="{{ .Site.Params.empty }}" data-hint="{{ .Site.Params.searchHint }}"><p class="search-hint">{{ .Site.Params.searchHint }}</p></div>
+  <script type="application/json" data-search-data>{{ $items | jsonify | safeJS }}</script>
+</dialog>

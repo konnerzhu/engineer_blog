@@ -1,0 +1,4 @@
+{{ define "main" }}
+<header class="page-heading"><span class="eyebrow">{{ .Data.Singular }}</span><h1>{{ .Title }}</h1><p>{{ len .Pages }} {{ if eq .Site.Language.Lang "zh" }}篇文章{{ else }}articles in this collection{{ end }}</p></header>
+<div class="post-grid list-grid">{{ range .Pages }}{{ partial "post-card.html" . }}{{ end }}</div>
+{{ end }}

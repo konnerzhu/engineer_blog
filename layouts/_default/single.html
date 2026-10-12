@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="article-wrap">
+  <a class="back-link" href="{{ "posts/" | relLangURL }}">← {{ .Site.Params.browse }}</a>
+  <header class="article-header"><div class="post-card-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span class="meta-dot"></span><span>{{ .ReadingTime }} {{ .Site.Params.min }}</span></div><h1>{{ .Title }}</h1>{{ with .Description }}<p class="article-deck">{{ . }}</p>{{ end }}<div class="article-author"><span class="avatar">{{ substr .Site.Params.author 0 1 | upper }}</span><span>{{ .Site.Params.by }} <strong>{{ .Site.Params.author }}</strong></span></div></header>
+  <div class="article-content">{{ .Content }}</div>
+  {{ with .Params.tags }}<div class="article-tags"><span>Filed under</span>{{ range . }}<a class="chip" href="{{ "tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>{{ end }}</div>{{ end }}
+  <div class="article-end"><span>✳</span><p>{{ if eq .Site.Language.Lang "zh" }}感谢阅读，下一篇见。{{ else }}Thanks for reading. See you in the next one.{{ end }}</p></div>
+</article>
+{{ end }}
