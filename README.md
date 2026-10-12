@@ -29,7 +29,7 @@ The generated files are written to `public/`.
 
 ## Publish with GitHub Pages
 
-Push this folder as the root of a GitHub repository, then select **Settings → Pages → Build and deployment → GitHub Actions**. The workflow in `.github/workflows/hugo.yaml` builds the site and deploys it on every push to `main`.
+Push this folder as the root of a GitHub repository, then select **Settings → Pages → Build and deployment → GitHub Actions**. The workflow in `.github/workflows/hugo.yaml` builds the site and deploys it on every push to `master`.
 
 For a custom domain, update `baseURL` in `hugo.yaml`, set the domain in the repository's Pages settings, and create the DNS record with your provider. GitHub Pages custom-domain instructions: <https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site>.
 
