@@ -3,6 +3,7 @@
   <nav class="nav" aria-label="Main navigation">
     <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Params.nav.home }}</a>
     <a href="{{ "categories/" | relLangURL }}">{{ .Site.Params.nav.topics }}</a>
+    {{ if eq .Site.Language.Lang "zh" }}<a href="{{ "posts/video-codec-comparison/" | relLangURL }}">{{ .Site.Params.nav.codec }}</a>{{ else }}<a href="{{ "zh/posts/video-codec-comparison/" | relURL }}">{{ .Site.Params.nav.codec }}</a>{{ end }}
     <a href="{{ "archive/" | relLangURL }}">{{ .Site.Params.nav.archive }}</a>
     <a href="{{ "about/" | relLangURL }}">{{ .Site.Params.nav.about }}</a>
   </nav>

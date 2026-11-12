@@ -18,6 +18,7 @@ languages:
       nav:
         home: Home
         topics: Topics
+        codec: Codec notes (中文)
         archive: Archive
         about: About
       tagline: A personal journal for curious minds.
@@ -44,6 +45,7 @@ languages:
       nav:
         home: 首页
         topics: 分类
+        codec: 视频编码专题
         archive: 归档
         about: 关于
       tagline: 写给好奇心的一本小札。
