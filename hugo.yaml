@@ -1,5 +1,5 @@
 baseURL: https://konnerzhu.github.io/engineer_blog/
-title: Field Notes
+title: Technology and Life
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 enableRobotsTXT: true
@@ -22,7 +22,7 @@ languages:
         archive: Archive
         about: About
       tagline: A personal journal for curious minds.
-      intro: "A place for things I’m learning, building, and thinking through."
+      intro: "A place for things I'm learning, building, and thinking through."
       latest: Latest writing
       browse: Browse all notes
       read: Read article
@@ -58,7 +58,7 @@ languages:
       searchHint: 输入关键词搜索博客
       empty: 没有找到相关文章，试试其他关键词。
       by: 作者
-      aboutTitle: 关于这个博客
+      # aboutTitle: 关于这个博客
       aboutText: 这里记录学习和创作中的点滴。你可以把这段介绍替换成自己的故事。
       topicsTitle: 按分类浏览
       archiveTitle: 文章归档

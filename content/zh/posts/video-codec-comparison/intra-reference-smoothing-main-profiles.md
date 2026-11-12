@@ -175,15 +175,8 @@ half = ClipToBitDepth((-a + 9*b + 9*c - d + 8) >> 4)
 
 AV1 的 `SMOOTH_PRED` 和 `FILTER_INTRA` 是独立预测工具，也不应与 `enable_intra_edge_filter` 所控制的参考边处理混用。
 
-## 7. 本仓库对应实现
 
-以下为仓库相对路径，便于检索：
-
-- `common/intra_prediction.c`：`get_filter_strength()`、`filter_edge()`、`get_upsample()`、`upsample_edge()`。
-- 同文件的 `get_filter_type()`：根据相邻块预测模式判断 Smooth 上下文。
-- 同文件的方向预测参考准备函数：`prep_dr_top_edge()`、`prep_dr_left_edge()`。
-
-## 8. 参考资料
+## 7. 参考资料
 
 1. [ITU-T H.264 规范](https://www.itu.int/rec/dologin_pub.asp?id=T-REC-H.264-202408-I%21%21PDF-E&lang=e&type=items)：Main Profile 约束；§8.3.2.2.1 的 Intra_8×8 参考样本滤波。
 2. [x264 帧内预测实现](https://raw.githubusercontent.com/mirror/x264/master/common/predict.c)：辅助区分预测公式内的参考加权与独立参考预滤波。
