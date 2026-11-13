@@ -1,5 +1,8 @@
 {{ define "main" }}
 <header class="page-heading"><span class="eyebrow">THE JOURNAL</span><h1>{{ .Title }}</h1>{{ with .Description }}<p>{{ . }}</p>{{ end }}</header>
-<div class="post-grid list-grid">{{ range .Paginator.Pages }}{{ partial "post-card.html" . }}{{ end }}</div>
+{{ $pages := .Pages }}
+{{ if .IsSection }}{{ $pages = .RegularPagesRecursive.ByDate.Reverse }}{{ end }}
+{{ $paginator := .Paginate $pages }}
+<div class="post-grid list-grid">{{ range $paginator.Pages }}{{ partial "post-card.html" . }}{{ end }}</div>
 {{ template "_internal/pagination.html" . }}
 {{ end }}
