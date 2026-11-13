@@ -20,6 +20,10 @@ tags: [AV1, HEVC, AVC, 帧内编码]
 
 为便于同条件比较，正文默认使用 **8 bit、4:2:0、普通有损帧内编码**；特殊工具、无损路径和帧间编码差异另行注明。HEVC Main10、RExt、SCC，AVC High，以及 VVC 不计入本文的 Main 工具集合。
 
+配套的[帧间编码详细对比]({{< relref "inter-coding-comparison-main-profiles.md" >}})讨论参考图像、运动矢量和运动补偿。
+
+各标准残差变换核、变换块树和量化参数的详细对比见[变换与量化详细对比]({{< relref "transform-quantization-comparison-main-profiles.md" >}})。
+
 “Main”是各标准内部的 Profile 名称，不能认为它们允许的位深和工具相同。特别是：
 
 - AVC Main **没有亮度 Intra_8×8，也没有 8×8 残差空间变换**。
